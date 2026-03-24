@@ -1,0 +1,1 @@
+--- Corrected /24 Network --- Network: 10.50.50.0 Broadcast: 10.50.50.255 Host Range: 10.50.50.1 - 10.50.50.254  --- /27 Subnet Details --- Network ID: 10.50.50.128 Broadcast ID: 10.50.50.159
