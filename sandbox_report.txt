@@ -1,0 +1,26 @@
+==================================================
+SESSION 10: SANDBOX DETONATION REPORT
+Operator: faisal
+==================================================
+
+QUESTION 1: Did the ping to google.com succeed or fail in Host-Only mode?
+ANSWER: [Type your answer here] The ping test was a success (confirmed air-gap). When I ran 'ping -c 4 google.com',
+the system immediately returned 'ping: google.com: Temporary failure in name
+resolution'. I also attempted to ping a direct external IP (8.8.8.8) and
+received 'Network is unreachable'. This confirms that the VMware Host-Only
+adapter is correctly isolating the VM from the internet and my local gateway.
+
+QUESTION 2: Why must a SOC analyst NEVER use "Bridged" mode when detonating unknown malware?
+ANSWER: [Type your answer here] Using Bridged mode for a sandbox is dangerous because it puts the VM directly
+on my home network. In this mode, the VM gets its own IP address from my
+router just like my actual MacBook or phone. If I were to execute malicious
+code, it could perform 'East-West' movement—scanning my local subnet for
+vulnerabilities, sniffing unencrypted traffic, or attempting to infect
+other devices in my house. Host-Only mode creates a digital dead-end,
+keeping the traffic contained strictly between the VM and the host.
+
+
+OPERATOR: Faisal
+MACHINE IP: 192.168.252.128
+NETWORK MODE: Host-Only (Air-Gapped)
+DATE: 2026-04-13
