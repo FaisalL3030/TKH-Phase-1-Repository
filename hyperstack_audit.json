@@ -1,0 +1,8 @@
+{
+  "operator": "FL",
+  "host_ip": "192.168.252.128",
+  "vm_sandbox_ip": "192.168.252.128",
+  "web_container_id": "8e3c2f91a5b2",
+  "isolation_test": "PASSED",
+  "persistence_verified": true
+}
