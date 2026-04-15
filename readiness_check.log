@@ -1,0 +1,15 @@
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: [Faisal Larry]
+Date: [April 15th 2026]
+
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): [No ]
+2. Docker (Containerization): [No ]
+3. Linux Hardening (UFW/chmod): [Yes ]
+4. VS Code Remote-SSH: [Yes ]
+
+Identify your weakest area and your plan to review it:
+My weakest areas are Docker (Containerization) and Nmap (Network Scanning).I plan to review Containerization through watching youtube videos and asking my gem for help. when it comes to nmap i plan to learn by being hands on and playing with the tool via my kali linux vm.
+==================================================
