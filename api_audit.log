@@ -1,0 +1,18 @@
+==================================================
+SESSION 27: API SECURITY AUDIT LOG
+==================================================
+
+1. BOLA (ID SWAP) EXPLOITATION
+* Targeted User ID: 102
+* Private Information Leaked: admin_secret: "Titan_Global_Admin_2026_Access"
+
+2. BUSINESS LOGIC EXPLOITATION (DISCOUNT HUNTER)
+* Hidden Discount Code Discovered: 9982
+* Method Used: I utilized Burp Suite Intruder to perform a brute-force attack on the discount_code field. I set the attack position on the code value and configured a "Numbers" payload type to iterate through the range 9900–9999. By monitoring the "Length" column in the results, I identified code 9982 as the successful payload because it returned a unique response size indicating a 100% discount application.
+
+3. REMEDIATION RECOMMENDATION
+* How would you fix the BOLA vulnerability?
+Answer: Implement Broken Object Level Authorization (BOLA) checks at the application level. The server must validate the user's session token (JWT or session cookie) to ensure the requesting user has the explicit authorization to access the specific resource ID requested, rather than trusting the ID provided in the URL.
+
+* How would you fix the Brute-Force vulnerability in the discount field?
+Answer: I would implement strict rate limiting on the checkout endpoint to throttle or block IP addresses after a set number of failed attempts. Additionally, I would recommend using longer, non-sequential, and cryptographically random discount codes to make brute-forcing statistically unfeasible.
